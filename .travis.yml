@@ -1,10 +1,15 @@
 language: java
 sudo: false
-script: mvn test
+script: mvn install
+before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "bbwpr"
+      - git config --local user.email "peter.rutschmann@bbw.ch"
+      - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
-  file: "FILE TO UPLOAD"
-  skip_cleanup: true
+  api_key:
+    secure: oSUOtrU9/JM9Ce20PEAh03LGYxUOKPBMFzIFrA10zFtMp13NlmbhoChumP7BT2AyogFWLi2ehY4vtAO2PF9jMvnHybXx1WiEfmvYqWfn17RaljHVnpATx/3NmVSwLxSfoscHh9qn86jpKpa3yCvK0U+QeszsgZ2kg4QYAuAUGC7UuHQgqVBJXnQv4GlE0Tj6VuYvsOgEK2Y3urQZ/Psqc93NSPx99u+aWrVogP+iLvv3od/1OhXAyqOPNJjABAEzO3G9Oq/MU4eBmufsPxGOYdbxh1+xYbta/8N+WdlSaHa0Y/MuAXI35zK0ugw9s5GHmARc5Xs8mZrUaT7xRPacL6JioAuh0lf5RLWuZRcwTBqlnMw1TdLKAhn97qnZffSgtt2iGeEPelRxrvvoAmMjq/6y4SOU97jiMQyDobra7WNi6hIv+uxM9l+sn+0rFZgQB1geX8Dw+ksfAXin7dsgQw9tFsywZVkaXbU0lpWzP2p1jEn3PkLLcDU7egHXSSl6q+evvf5HTPzeob6JRThZXoR6eZtMPSgSXeV7qor+akkFTV6A6y8HGTS5JE3mOuvLJYgcNxO5a+7CgNiAsEVvdBP4R6bqZTKKHVQ0zP1rmUJRJaYwvSMkX4Xuiah/jrgRenN08bzAiG9avsjkxFBg6XhxcN61udjuN20mPYaySWU=
+  file: D:\Modul_426\Workspace\maven-demo\target\maven-demo-0.0.1-SNAPSHOT.jar
   on:
-    tags: true
+    repo: sebuchmann/Calculator
