@@ -9,6 +9,6 @@ deploy:
   provider: releases
   api_key:
     secure: OqZD6ZHiABzvf8TtCVK0JhIErjt8ZBVkbS4SjekDbAbHv9fWZB0Gc1PifkJ0wGVJqhpR122D2Oa6vQRbSuLw9OSwcTjz8dKH3drH2yVyYlYir+hKdtLpjg2+6//aiXoSweNSu6Z8SyQsIFf46tkXM+BqLqdhsBjZY6rN2iFRg5sThK3ghjdpYHixWUilPS9dlJZWhiV60XyPyLN9MyM0B7tVCkPWv+48ul9zJC/KSwwNKLa/Fc+7VpbjZpDAI6zigk6oTQzjB8IqcRud5Vd2OcmxMD+pKL3sPjRu6PhitY3UqCOOsi4F+iB84nZ4rEZ6pHBzp4yGMBkO8N7A/QWsEH51jhdZpUBA0sz0mcPkLE56Kru8H45UK5Fhf/Gq+6W/vdKaQy9YCYeig9xIgHxw3eut1iD1B5IGJ5xpRFvmutMbg5nKzktgtjHGBH2aO8amkVcnol/fPgpA801TxmbyX6kBhIz2pr7ze7Bz0yDVDXuPit+VuVhR0J773aCQoZwKjEsUcFe1jcgDCsMLA+9J8uMESVGxjs2vRPV8TijL33Rzi0Qx1i+s6YbIMgvwq2VQ8eCuVehf+GbOr1aGL6eSUg1OQyG+c/VJVY8eTEyRlk52PhQAd1/S2dXVpUZMjJybmE81UeGPHI17yHAXruDjj5j2JscsUuB99bCcjvJUhD4=
-  file: bla
+  file: /home/travis/.m2/repository/com/sebuchmann/maven-demo/0.0.1-SNAPSHOT/maven-demo-0.0.1-SNAPSHOT.jar
   on:
     repo: sebuchmann/Calculator
